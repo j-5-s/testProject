@@ -2,7 +2,7 @@
 
 Trying to figure out why create messages are not getting sent through socket IO but destroy is.
 
-## Steps to repoproduce the issues
+## Steps to reproduce the issues
 - clone this repo.
 - use postman to to create a few Tasks (the only model) with one attribute `text`
 
@@ -36,7 +36,7 @@ io.socket.on('connect', function(){
     console.log('connected')
     
     io.socket.on('task', function(message){
-        //this online fires on delete, not create
+        //this only fires on delete, not create
         console.log('task: ', message)
 
     });
